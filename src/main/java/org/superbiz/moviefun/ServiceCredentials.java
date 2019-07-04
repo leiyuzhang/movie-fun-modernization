@@ -10,8 +10,8 @@ public class ServiceCredentials {
 
     private final String vcapServices;
 
-    public ServiceCredentials(String vcapServices) {
-        this.vcapServices = vcapServices;
+    public ServiceCredentials() {
+        this.vcapServices = "{\"user-provided\": [{\"credentials\": {\"access_key_id\":  \"${MINIO_ACCESS_KEY:?missing}\", \"bucket\": \"moviefun\", \"secret_access_key\": \"${MINIO_SECRET_ACCESS_KEY:?missing}\", \"endpoint\": \"http://127.0.0.1:9000\"}, \"name\": \"photo-storage\"}]}";
     }
 
     public String getCredential(String serviceName, String serviceType, String credentialKey) {
