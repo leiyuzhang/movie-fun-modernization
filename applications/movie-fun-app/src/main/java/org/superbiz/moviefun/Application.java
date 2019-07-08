@@ -25,8 +25,8 @@ public class Application {
     }
 
     @Bean
-    ServiceCredentials serviceCredentials(@Value("${vcap.services}") String vcapServices) {
-        return new ServiceCredentials(vcapServices);
+    ServiceCredentials serviceCredentials() {
+        return new ServiceCredentials();
     }
 
     @Bean
