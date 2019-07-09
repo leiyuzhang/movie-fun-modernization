@@ -22,6 +22,8 @@ ext.setupProdFlywayExtension = { extension, databaseInstanceName ->
         extension.user = user
         extension.password = password
         extension.url = url
+        extension.baselineOnMigrate = true
+
     }
 
     return extension

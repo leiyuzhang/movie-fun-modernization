@@ -28,7 +28,7 @@ task openTunnel {
             tunnelProcess = "cf ssh -N -L 63306:${getMysqlHost("movie-database")}:3306 movie-service".execute()
         }
 
-        sleep 5_000L
+        sleep 60_000L
 
         if (tunnelProcess == null) throw new Exception("Unable to open tunnel!")
     }
